@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Transactions</h1>
+<h2>Exchange</h2>
+<hr>
+<form action = "save/" method = "post">
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <br>
+    <input type="submit" value=Submit class="btn btn-primary">
+</form>
+<hr>
+<a href="{% url 'transactions_index' %}">Back to transactions</a>
+{% endblock %}

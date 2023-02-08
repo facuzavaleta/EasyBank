@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Transactions</h1>
+<h2>Transference</h2>
+<hr>
+Error: You can't transfer ${{ amount }} because your balance is currently ${{ sender.balance }}.
+<hr>
+<a href="{% url 'transactions_index' %}">Back to transactions</a>
+{% endblock %}

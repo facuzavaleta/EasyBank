@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Transactions</h1>
+<h2>Exchange</h2>
+<hr>
+Your exchange has been successfully completed.
+<hr>
+<strong>Receipt:</strong>
+<br>
+<br>
+<ul>Type: {{ receipt.transactiontype }}</ul>
+<ul>Sender: {{ sender.account_number }}</ul>
+<ul>Bank: {{ sender.bank }}</ul>
+<ul>Currency: {{ sender.currency }}</ul>
+<ul>Amount: -${{ receipt.amount }}</ul>
+<ul>Receiver: {{ receiver.account_number }}</ul>
+<ul>Bank: {{ receiver.bank }}</ul>
+<ul>Currency: {{ receiver.currency }}</ul>
+<ul>Amount: +${{ converted }}</ul>
+<ul>Date: {{ receipt.created_on }}</ul>
+<ul>Balance Sender: ${{ sender.balance }} {{ sender.currency }}</ul>
+<ul>Balance Receiver: ${{ receiver.balance }} {{ receiver.currency }}</ul>
+<ul>Receipt N°: {{ receipt.id }}</ul>
+<br>
+<button class = "btn btn-primary" onclick="window.print()">Print this receipt</button>
+<a href="downloadPDF/" class = "btn btn-primary">Download PDF</a>
+<hr>
+<a href="{% url 'transactions_index' %}">Back to transactions</a>
+{% endblock %}

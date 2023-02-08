@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Bank Accounts</h1>
+<h2>Details</h2>
+<hr>
+
+<ul>Accont Number: {{ bankaccount.account_number }}</ul>
+<ul>Balance: ${{ bankaccount.balance }}</ul>
+<ul>Currency: {{ bankaccount.currency }}</ul>
+<ul>Bank: {{ bankaccount.bank }}</ul>
+<ul>Created On: {{ bankaccount.created_on }}</ul>
+<ul><a href="delete/" class = "btn btn-primary">Delete</a>
+<a href="movements/" class = "btn btn-primary">Movements</a></ul>
+<hr>
+
+<!-- <h3>Receipt:</h3>
+<ul>Type: {{ receipt.transactiontype }}</ul>
+<ul>Amount: ${{ receipt.amount }}</ul>
+<ul>Date: {{ receipt.created_on }}</ul>
+<ul>Receipt ID: {{ receipt.id }}</ul>
+<hr> -->
+
+<a href="{% url 'bankaccounts_index' %}">Back to Bank Accounts</a>
+{% endblock %}

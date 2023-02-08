@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>About</h1>
+<hr>
+<p>
+    This is a Django project for <em>educational and learning purposes</em>. 
+    It <em>simulates</em> a banking system to do financial operations between different bank accounts.It has a user administration system, management of bank accounts and different transaction forms. 
+    It was made with the intention of <em>developing</em> and demonstrating what was learned 
+    and serving as a <em>portfolio application</em>.
+    <em>It was developed in Django 4.1.2 and Python 3.11 by Facundo Zavaleta in 2022.</em>
+</p>
+<hr>
+<a href="{% url 'home' %}">Back to home</a>
+{% endblock %}

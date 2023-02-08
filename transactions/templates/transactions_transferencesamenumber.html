@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Transactions</h1>
+<h2>Transference</h2>
+<hr>
+Error: The sender's account number cannot match the receiver's account number.
+<hr>
+<a href="{% url 'transactions_index' %}">Back to transactions</a>
+{% endblock %}

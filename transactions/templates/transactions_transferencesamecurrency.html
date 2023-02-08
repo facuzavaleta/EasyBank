@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Transactions</h1>
+<h2>Transference</h2>
+<hr>
+Error: The currency of both accounts should be the same.
+<hr>
+<a href="{% url 'transactions_index' %}">Back to transactions</a>
+{% endblock %}

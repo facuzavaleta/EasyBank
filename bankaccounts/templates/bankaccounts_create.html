@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Bank Accounts</h1>
+<h2>Create</h2>
+<hr>
+<form action = "createsave/" method = "post">
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <br>
+    <input type="submit" value=Submit class="btn btn-primary">
+</form>
+<hr>
+<a href="{% url 'bankaccounts_index' %}">Back to Bank Accounts</a>
+{% endblock %}

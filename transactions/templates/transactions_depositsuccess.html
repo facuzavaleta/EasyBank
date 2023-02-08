@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Transactions</h1>
+<h2>Deposit</h2>
+<hr>
+Your deposit has been successfully completed.
+<hr>
+<strong>Receipt:</strong>
+<br>
+<br>
+<ul>Type: {{ receipt.transactiontype }}</ul>
+<ul>Account N°: {{ bankaccount.account_number }}</ul>
+<ul>Bank: {{ bankaccount.bank }}</ul>
+<ul>Currency: {{ bankaccount.currency }}</ul>
+<ul>Amount: +${{ receipt.amount }}</ul>
+<ul>Date: {{ receipt.created_on }}</ul>
+<ul>Balance: ${{ bankaccount.balance }} {{ bankaccount.currency }}</ul>
+<ul>Receipt N°: {{ receipt.id }}</ul>
+<br>
+<button class = "btn btn-primary" onclick="window.print()">Print this receipt</button>
+<a href="downloadPDF/" class = "btn btn-primary">Download PDF</a>
+<hr>
+<a href="{% url 'transactions_index' %}">Back to transactions</a>
+{% endblock %}

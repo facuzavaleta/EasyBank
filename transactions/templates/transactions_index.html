@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% if user.is_authenticated %}
+<h1>Transactions</h1>
+<hr>
+<li>
+    <a href="{% url 'transactions_deposit' %}" class="btn btn-primary">Deposit</a>
+</li>
+<br>
+<li>
+    <a href="{% url 'transactions_extraction' %}" class="btn btn-primary">Extraction</a>
+</li>
+<br>
+<li>
+    <a href="{% url 'transactions_exchange' %}" class="btn btn-primary">Exchange</a>
+</li>
+<br>
+<li>
+    <a href="{% url 'transactions_transference' %}" class="btn btn-primary">Transference</a>
+</li>
+<hr>
+<a href="{% url 'home' %}">Back to home</a>
+{% else %}
+<hr>
+You must <a href="{% url 'login' %}">Login</a> to see this page. Back to <a href="{% url 'home' %}">home</a>.
+{% endif %}
+{% endblock %}

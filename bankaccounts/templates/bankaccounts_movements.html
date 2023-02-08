@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Bank Accounts</h1>
+<h2>Movements</h2>
+<hr>
+
+<strong>User:</strong>
+
+{% for object in historialObjects %}
+    <hr>
+    <ul><strong>{{ object.transactiontype }}</strong></ul>
+
+    {% if object.transactiontype == "Deposit" %}
+    <ul style="color: green"><strong>+${{ object.amount }}</strong></ul>
+
+    {% elif object.transactiontype == "Extraction" %}
+    <ul style="color: red"><strong>-${{ object.amount }}</strong></ul>
+
+    {% elif object.transactiontype == "Exchange" and bankaccount.currency == "USD" %}
+    <ul style="color: red"><strong>USD: -${{ object.amount }}</strong></ul>
+    <ul style="color: green"><strong>ARS: +${% widthratio object.amount 1 conversion %}</strong></ul>
+
+    {% elif object.transactiontype == "Exchange" and bankaccount.currency == "ARS" %}
+    <ul style="color: red"><strong>ARS: -${{ object.amount }}</strong></ul>
+    <ul style="color: green"><strong>USD: +${% widthratio object.amount conversion 1 %}</strong></ul>
+
+    {% elif object.transactiontype == "Transference" %}
+    <ul style="color: red"><strong>-${{ object.amount }}</strong></ul>
+    {% endif %}
+
+    <ul>{{ object.created_on }}</ul>
+
+{% empty %}
+No user movements.
+
+{% endfor %}
+
+<hr>
+
+<strong>Received:</strong>
+
+{% for object in historialObjectsReceived %}
+    <hr>
+    <ul><strong>{{ object.transactiontype }}</strong></ul>
+
+    {% if object.transactiontype == "Exchange" and bankaccount.currency == "USD" %}
+    <ul style="color: green"><strong>USD: +${{ object.amount }}</strong></ul>
+
+    {% elif object.transactiontype == "Exchange" and bankaccount.currency == "ARS" %}
+    <ul style="color: green"><strong>ARS: +${{ object.amount }}</strong></ul>
+
+    {% elif object.transactiontype == "Transference" %}
+    <ul style="color: green"><strong>+${{ object.amount }}</strong></ul>
+
+    {% endif %}
+
+    <ul>{{ object.created_on }}</ul>
+
+{% empty %}
+No received objects.
+
+{% endfor %}
+
+<hr>
+<a href="{% url 'bankaccounts_index' %}">Back to Bank Accounts</a>
+{% endblock %}

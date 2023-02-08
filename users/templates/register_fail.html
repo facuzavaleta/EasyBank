@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h3>Oops! There was a mistake in your registration, please try again:</h3>
+<br>
+<a href="{% url 'register' %}"class="btn btn-primary">Try Again</a>
+<a href="{% url 'home' %}"class="btn btn-primary">Go back home</a>
+
+{% endblock %}

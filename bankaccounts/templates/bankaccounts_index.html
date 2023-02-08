@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% if user.is_authenticated %}
+<h1>Bank Accounts</h1>
+<hr>
+<li>
+    <a href="{% url 'bankaccounts_create' %}" class="btn btn-primary">Create</a>
+</li>
+<hr>
+{% for bankaccount in bankaccounts %}
+<ul>Account number: {{ bankaccount.account_number }}</ul>
+<ul>Currency: {{ bankaccount.currency }}</ul>
+<ul>Bank: {{ bankaccount.bank }}</ul>
+<ul><a href="{{ bankaccount.account_number }}">Details</a></ul>
+<hr>
+{% empty %}
+No bank accounts created.
+{% endfor %}
+<a href="{% url 'home' %}">Back to home</a>
+{% else %}
+<hr>
+You must <a href="{% url 'login' %}">Login</a> to see this page. Back to <a href="{% url 'home' %}">home</a>.
+{% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Bank Accounts</h1>
+<h2>Delete</h2>
+<hr>
+Are you sure you want to delete this account?
+<br>
+<br>
+<a href="delete/" class = "btn btn-primary">Delete</a>
+<hr>
+<a href="{% url 'bankaccounts_index' %}">Back to Bank Accounts</a>
+{% endblock %}

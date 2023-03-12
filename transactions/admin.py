@@ -11,8 +11,6 @@ class ExchangeAdmin(admin.ModelAdmin):
 class TransferenceAdmin(admin.ModelAdmin):
     pass
 
-
-
 admin.site.register(Deposit, DepositAdmin)
 admin.site.register(Extraction, ExtractionAdmin)
 admin.site.register(Exchange, ExchangeAdmin)

@@ -9,6 +9,7 @@ class DepositForm(forms.ModelForm):
         self.request = kwargs.pop("request", None)
         super(DepositForm, self).__init__(*args, **kwargs)
         # Por defecto el queryset debe estar vacio
+        self.fields['amount'].widget.attrs.update({'placeholder': 'Amount to deposit'})
         self.fields["account"].queryset = BankAccount.objects.none()
         if self.request:
             if self.request.user.is_authenticated:
@@ -25,6 +26,7 @@ class ExtractionForm(forms.ModelForm):
         self.request = kwargs.pop("request", None)
         super(ExtractionForm, self).__init__(*args, **kwargs)
         # Por defecto el queryset debe estar vacio
+        self.fields['amount'].widget.attrs.update({'placeholder': 'Amount to extract'})
         self.fields["account"].queryset = BankAccount.objects.none()
         if self.request:
             if self.request.user.is_authenticated:
@@ -41,6 +43,8 @@ class TransferenceForm(forms.ModelForm):
         self.request = kwargs.pop("request", None)
         super(TransferenceForm, self).__init__(*args, **kwargs)
         # Por defecto el queryset debe estar vacio
+        self.fields['amount'].widget.attrs.update({'placeholder': 'Amount to transfer'})
+        self.fields['receiver'].widget.attrs.update({'placeholder': 'Enter receiver account number'})
         self.fields["sender"].queryset = BankAccount.objects.none()
         if self.request:
             if self.request.user.is_authenticated:
@@ -57,6 +61,7 @@ class ExchangeForm(forms.ModelForm):
         self.request = kwargs.pop("request", None)
         super(ExchangeForm, self).__init__(*args, **kwargs)
         # Por defecto el queryset debe estar vacio
+        self.fields['amount'].widget.attrs.update({'placeholder': 'Amount to exchange'})
         self.fields["sender"].queryset = BankAccount.objects.none()
         if self.request:
             if self.request.user.is_authenticated:

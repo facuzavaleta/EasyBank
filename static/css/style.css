@@ -15,6 +15,10 @@
     opacity: 0.80;
 }
 
+.carousel-caption a {
+    text-decoration: none;
+}
+
 .carousel-caption p {
     color: #000;
     font-size: 2rem;
@@ -54,4 +58,21 @@ text-decoration: none;
 
 a:hover {
     transition: 1s
+}
+
+.carousel-image {
+    max-height: 800px;
+    width: auto;
+}
+
+main.container {
+    margin-left: 2cm;
+    margin-right: 2cm;
+    padding: 0;
+
+}
+  
+main.home-container {
+    margin: 0;
+    padding: 0;
 }

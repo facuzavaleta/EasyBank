@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+<main class="container home-container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -10,34 +10,35 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{% static 'img/img1.jpg' %}" alt="Primera imagen" class="d-block w-100">
+        <img src="{% static 'img/img1.jpg' %}" alt="Primera imagen" class="d-block w-100 carousel-image">
         <div class="carousel-caption">
-            <h1>Manage your bank accounts</h1>
-            <p>You can manage your bank accounts easily</p>
+          <a href="{% url 'bankaccounts_index' %}"><h1>Manage your bank accounts</h1></a>
+          <p>You can manage your bank accounts easily</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'img/img2.jpg' %}" alt="Segunda imagen" class="d-block w-100">
+        <img src="{% static 'img/img2.jpg' %}" alt="Segunda imagen" class="d-block w-100 carousel-image">
         <div class="carousel-caption">
-            <h1>Realize any transaction you want</h1>
-            <p>You'll be able to deposit, withdraw, exchange and transfer money</p>
+          <a href="{% url 'transactions_index' %}"><h1>Realize any transaction you want</h1></a>
+          <p>You'll be able to deposit, withdraw, exchange and transfer money</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'img/img3.jpg' %}" alt="Tercera imagen" class="d-block w-100">
+        <img src="{% static 'img/img3.jpg' %}" alt="Tercera imagen" class="d-block w-100 carousel-image">
         <div class="carousel-caption">
-            <h1>Learn more about us</h1>
-            <p>You can go to the about section to know more about this project</p>
+          <a class="nav-link" href="{% url 'about' %}"><h1>Learn more about us</h1></a>
+          <p>You can go to the about section to know more about this project</p>
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <!-- <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Anterior</span>
     </a>
     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Siguiente</span>
-    </a>
+    </a> -->
   </div>
+</main>
 {% endblock %}

@@ -2,17 +2,18 @@
 {% block page_content %}
 {% if user.is_authenticated %}
 <br>
-<h1>User</h1>
+<h1>User: <strong>{{ user.username }}</strong></h1>
 <hr>
-<h2><strong>{{ user.username }}</strong></h2>
 <br>
 <h3>First Name: {{ user.first_name }}</h3>
 <h3>Last Name: {{ user.last_name }}</h3>
 <h3>E-mail: {{ user.email }}</h3>
 <h3>Created: {{ user.date_joined }}</h3>
 <h3>Password:</h3>
-<h4>Forgot your password? <a href="{% url 'users:password_reset' %}">Reset password</a></h4>
-<h4>Want to change it? <a href="{% url 'users:password_change' %}">Change Password</a></h4>
+<ul>
+    <li><h4>Forgot your password? <a href="{% url 'users:password_reset' %}">Reset password</a></h4></li>
+    <li><h4>Want to change it? <a href="{% url 'users:password_change' %}">Change Password</a></h4></li>
+</ul>
 <hr>
 <a href="{% url 'home' %}">Back to home</a>
 <br>

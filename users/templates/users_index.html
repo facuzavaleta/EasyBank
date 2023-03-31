@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block page_content %}
 {% if user.is_authenticated %}
+<br>
 <h1>User</h1>
 <hr>
 <h2><strong>{{ user.username }}</strong></h2>
@@ -9,10 +10,17 @@
 <h3>Last Name: {{ user.last_name }}</h3>
 <h3>E-mail: {{ user.email }}</h3>
 <h3>Created: {{ user.date_joined }}</h3>
+<h3>Password:</h3>
+<h4>Forgot your password? <a href="{% url 'users:password_reset' %}">Reset password</a></h4>
+<h4>Want to change it? <a href="{% url 'users:password_change' %}">Change Password</a></h4>
 <hr>
 <a href="{% url 'home' %}">Back to home</a>
+<br>
+<br>
 {% else %}
-<hr>
-You must <a href="{% url 'login' %}">Login</a> to see this page. Back to <a href="{% url 'home' %}">home</a>.
+<br>
+You must <a href="{% url 'users:login' %}">Login</a> to see this page. Back to <a href="{% url 'home' %}">home</a>.
+<br>
+<br>
 {% endif %}
 {% endblock %}

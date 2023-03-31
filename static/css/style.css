@@ -1,0 +1,57 @@
+.nav-user {
+    text-align: right;
+}
+
+.carousel-caption {
+    top: 15%;
+    left: 5%;
+    text-align: left;
+}
+
+.carousel-caption h1 {
+    color: #000;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.80;
+}
+
+.carousel-caption p {
+    color: #000;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.80;
+}
+
+.carousel-inner {
+    height: 13cm;
+    width: max-content;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar.bg-dark,
+.footer.bg-dark {
+    background-color: rgba(52,58,64,255)    ;
+}
+
+.nav-link-username {
+    color: whitesmoke
+}
+
+.nav-link-username:hover {
+color: rgb(177, 172, 172);
+text-decoration: none;
+}
+
+.footer {
+    padding: 10px;
+    color: whitesmoke;
+  }
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: 1s
+}

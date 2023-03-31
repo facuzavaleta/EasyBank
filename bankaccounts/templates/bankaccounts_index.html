@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block page_content %}
 {% if user.is_authenticated %}
+<br>
 <h1>Bank Accounts</h1>
 <hr>
 <li>
@@ -14,11 +15,18 @@
 <ul><a href="{{ bankaccount.account_number }}">Details</a></ul>
 <hr>
 {% empty %}
+<br>
 No bank accounts created.
+<br>
+<br>
 {% endfor %}
 <a href="{% url 'home' %}">Back to home</a>
+<br>
+<br>
 {% else %}
-<hr>
-You must <a href="{% url 'login' %}">Login</a> to see this page. Back to <a href="{% url 'home' %}">home</a>.
+<br>
+You must <a href="{% url 'users:login' %}">Login</a> to see this page. Back to <a href="{% url 'home' %}">home</a>.
+<br>
+<br>
 {% endif %}
 {% endblock %}

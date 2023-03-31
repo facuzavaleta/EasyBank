@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
 
 {% block page_content %}
+<br>
 <h1><strong>Welcome to EasyBank</strong></h1>
 <h2>Register</h2>
 <hr>
 <form method="post">
     {% csrf_token %}
-    {{form}}
+    {{form.as_p}}
     <input type="submit" value="Register" class="btn btn-primary">
 </form>
-
+<hr>
 <a href="{% url 'home' %}">Back to home</a>
+<br>
+<br>
 {% endblock %}

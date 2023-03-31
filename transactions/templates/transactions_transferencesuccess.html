@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block page_content %}
+<br>
 <h1>Transactions</h1>
 <h2>Transference</h2>
 <hr>
@@ -23,4 +24,6 @@ Your transference has been successfully completed.
 <a href="downloadPDF/" class = "btn btn-primary">Download PDF</a>
 <hr>
 <a href="{% url 'transactions_index' %}">Back to transactions</a>
+<br>
+<br>
 {% endblock %}

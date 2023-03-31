@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block page_content %}
+<br>
 <h1><strong>Welcome to EasyBank</strong></h1>
 <h2>Login</h2>
 <hr>
@@ -10,6 +11,8 @@
     {{ form.as_p }}
     <input type="submit" value="Login" class="btn btn-primary">
 </form>
-
+<hr>
 <a href="{% url 'home' %}">Back to home</a>
+<br>
+<br>
 {% endblock %}

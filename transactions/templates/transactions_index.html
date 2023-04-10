@@ -22,8 +22,7 @@
 <hr>
 <a href="{% url 'home' %}">Back to home</a>
 {% else %}
-<hr>
-You must <a href="{% url 'login' %}">Login</a> to see this page. Back to <a href="{% url 'home' %}">home</a>.
+You must <a href="{% url 'users:login' %}">Login</a> to see this page. Back to <a href="{% url 'home' %}">home</a>.
 {% endif %}
 <br>
 <br>

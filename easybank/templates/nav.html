@@ -1,25 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}"><strong>EasyBank</strong></a>
+        <a class="navbar-brand fs-4" href="{% url 'home' %}"><strong>EasyBank</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+        <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="{% url 'users:users_index' %}">User</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="{% url 'bankaccounts_index' %}">Bank Accounts</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="{% url 'transactions_index' %}">Transactions</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>
           </ul>

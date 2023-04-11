@@ -1,8 +1,9 @@
 .carousel-caption {
-  color:#666;
+  color: #818181;
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
+  left: 5%;
   text-align: center;
 }
 
@@ -12,10 +13,13 @@
 }
 
 .carousel-caption a:hover{
-  color:#696767;
+  color: #818181;
   transition: 1s;
 }
 
+.carousel-inner {
+  height: 100vh;
+}
 .carousel-caption h3 {
   font-size: 3em;
   margin-bottom: 0.5em;
@@ -26,10 +30,13 @@
   margin-bottom: 1em;
 }
 
+.carousel-item a {
+  font-weight: 500;
+}
 nav a {
   font-size: 18px;
   text-decoration: none;
-  color: #666;
+  color: #818181;
 }
 
 nav a:hover {
@@ -44,7 +51,7 @@ footer {
 }
 
 footer p {
-  color: #666;
+  color: #818181;
 }
 
 footer h6 {
@@ -54,7 +61,7 @@ footer h6 {
 }
 
 footer a {
-  color: #666;
+  color: #818181;
   text-decoration: none;
 }
 

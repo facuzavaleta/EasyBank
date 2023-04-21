@@ -4,21 +4,49 @@
 {% if user.is_authenticated %}
 <h1>Transactions</h1>
 <hr>
-<li>
-    <a href="{% url 'transactions_deposit' %}" class="btn btn-primary">Deposit</a>
-</li>
-<br>
-<li>
-    <a href="{% url 'transactions_extraction' %}" class="btn btn-primary">Extraction</a>
-</li>
-<br>
-<li>
-    <a href="{% url 'transactions_exchange' %}" class="btn btn-primary">Exchange</a>
-</li>
-<br>
-<li>
-    <a href="{% url 'transactions_transference' %}" class="btn btn-primary">Transference</a>
-</li>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="width: auto;">
+      <div class="card-body">
+        <h5 class="card-title">Deposit</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Add money to your accounts</h6>
+        <br>
+        <a href="{% url 'transactions_deposit' %}" class="btn btn-primary">Deposit</a>
+      </div>
+    </div>
+    <br>
+    <div class="card" style="width: auto;">
+      <div class="card-body">
+        <h5 class="card-title">Extraction</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Withdraw money from your accounts</h6>
+        <br>
+        <a href="{% url 'transactions_extraction' %}" class="btn btn-primary">Extraction</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6">
+    <div class="card" style="width: auto;">
+      <div class="card-body">
+        <h5 class="card-title">Exchange</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Convert one currency into another</h6>
+        <br>
+        <a href="{% url 'transactions_exchange' %}" class="btn btn-primary">Exchange</a>
+      </div>
+    </div>
+    <br>
+    <div class="card" style="width: auto;">
+      <div class="card-body">
+        <h5 class="card-title">Transference</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Transfer money from one bank account to another</h6>
+        <br>
+        <a href="{% url 'transactions_transference' %}" class="btn btn-primary">Transference</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <hr>
 <a href="{% url 'home' %}">Back to home</a>
 {% else %}

@@ -4,14 +4,27 @@
 <h1>Bank Accounts</h1>
 <h2>Details</h2>
 <hr>
-
-<ul>Accont Number: {{ bankaccount.account_number }}</ul>
-<ul>Balance: ${{ bankaccount.balance }}</ul>
-<ul>Currency: {{ bankaccount.currency }}</ul>
-<ul>Bank: {{ bankaccount.bank }}</ul>
-<ul>Created On: {{ bankaccount.created_on }}</ul>
-<ul><a href="delete/" class = "btn btn-primary">Delete</a>
-<a href="movements/" class = "btn btn-primary">Movements</a></ul>
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title">Account number</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ bankaccount.account_number }}</h6>
+      <hr>
+      <h5 class="card-title">Balance</h5>
+      <h6 class="card-subtitle mb-2 text-muted">${{ bankaccount.balance }}</h6>
+      <hr>
+      <h5 class="card-title">Currency</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ bankaccount.currency }}</h6>
+      <hr>
+      <h5 class="card-title">Bank</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ bankaccount.bank }}</h6>
+      <hr>
+      <h5 class="card-title">Created On</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ bankaccount.created_on }}</h6>
+      <hr>
+      <a href="delete/" class = "btn btn-primary">Delete</a>
+      <a href="movements/" class = "btn btn-primary">Movements</a></ul>
+    </div>
+</div>
 <hr>
 
 <!-- <h3>Receipt:</h3>

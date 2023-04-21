@@ -5,15 +5,28 @@
 <h1>User: <strong>{{ user.username }}</strong></h1>
 <hr>
 <br>
-<h3>First Name: {{ user.first_name }}</h3>
-<h3>Last Name: {{ user.last_name }}</h3>
-<h3>E-mail: {{ user.email }}</h3>
-<h3>Created: {{ user.date_joined }}</h3>
-<h3>Password:</h3>
-<ul>
-    <li><h4>Forgot your password? <a href="{% url 'users:password_reset' %}">Reset password</a></h4></li>
-    <li><h4>Want to change it? <a href="{% url 'users:password_change' %}">Change Password</a></h4></li>
-</ul>
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">First Name</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ user.first_name }}</h6>
+      <hr>
+      <h5 class="card-title">Last Name</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ user.last_name }}</h6>
+      <hr>
+      <h5 class="card-title">E-Mail</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ user.email }}</h6>
+      <hr>
+      <h5 class="card-title">Created</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ user.date_joined }}</h6>
+      <hr>
+      <h5 class="card-title">Password</h5>
+      <p class="card-text">For security reasons we won't show your password</p>
+      <a href="{% url 'users:password_reset' %}" class="card-link">Reset password</a>
+      <a href="{% url 'users:password_change' %}" class="card-link">Change Password</a>
+    </div>
+</div>
+
 <hr>
 <a href="{% url 'home' %}">Back to home</a>
 <br>

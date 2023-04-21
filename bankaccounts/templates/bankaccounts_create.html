@@ -6,8 +6,7 @@
 <hr>
 <form action = "createsave/" method = "post">
     {% csrf_token %}
-    {{ form }}
-    <br>
+    {{ form.as_p }}
     <br>
     <input type="submit" value=Submit class="btn btn-primary">
 </form>

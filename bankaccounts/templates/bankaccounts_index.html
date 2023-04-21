@@ -4,22 +4,39 @@
 <br>
 <h1>Bank Accounts</h1>
 <hr>
-<li>
-    <a href="{% url 'bankaccounts_create' %}" class="btn btn-primary">Create</a>
-</li>
+<a href="{% url 'bankaccounts_create' %}" class="btn btn-primary">Create Bank Account</a>
 <hr>
 {% for bankaccount in bankaccounts %}
-<ul>Account number: {{ bankaccount.account_number }}</ul>
-<ul>Currency: {{ bankaccount.currency }}</ul>
-<ul>Bank: {{ bankaccount.bank }}</ul>
-<ul><a href="{{ bankaccount.account_number }}">Details</a></ul>
-<hr>
+{% if forloop.counter0|divisibleby:3 %}
+<div class="row">
+{% endif %}
+<div class="col-sm-4">
+    <div class="card">
+        <div class="card-body">
+        <h5 class="card-title">Account number</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ bankaccount.account_number }}</h6>
+        <hr>
+        <h5 class="card-title">Currency</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ bankaccount.currency }}</h6>
+        <hr>
+        <h5 class="card-title">Bank</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ bankaccount.bank }}</h6>
+        <hr>
+        <a href="{{ bankaccount.account_number }}" class="card-link">Details</a>
+        </div>
+    </div>
+</div>
+{% if forloop.counter|divisibleby:3 or forloop.last %}
+</div>
+<br>
+{% endif %}
 {% empty %}
 <br>
 No bank accounts created.
 <br>
 <br>
 {% endfor %}
+<hr>
 <a href="{% url 'home' %}">Back to home</a>
 <br>
 <br>

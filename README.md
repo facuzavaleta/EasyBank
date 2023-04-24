@@ -6,6 +6,11 @@ This is a Django project for educational and learning purposes. It simulates a b
 *The app is still with the DEBUG mode on True.
 
 Instructions:
+ - Download the last release (1.1.0)
+ - Unzip and save the project folder
+ - Open the console and when you are located in the project folder, you must start the virtual environment first with this command:
+   ```/easybank$ source venv/bin/activate```
+   
  - Create a User
  - Create a Bank Account (or more if necessary)
  - Go to Transactions and choose the one you prefer

@@ -9,10 +9,10 @@ Instructions:
  - Download the last release (1.1.0)
  - Unzip and save the project folder
  - Open the console and when you are located in the project folder, you must start the virtual environment first with this command:
-   ```/easybank$ source venv/bin/activate```
+ - ```/easybank$ source venv/bin/activate```
    
- - and then install the requirements with this another command:
-   ```/easybank$ pip install -r requirements.txt```
+ - Then install the requirements with this another command:
+ - ```/easybank$ pip install -r requirements.txt```
    
  - Create a User
  - Create a Bank Account (or more if necessary)

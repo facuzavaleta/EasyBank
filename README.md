@@ -14,6 +14,7 @@ Instructions:
  - ```/easybank$ pip install -r requirements.txt```
  - Finally you should start the project with this last command:
  - ```/easybank$ python3 manage.py runserver```
+ - Ctrl + click on the link to enter the project website from your local server
 
 In the app:
  - Create a User

@@ -12,10 +12,11 @@ Instructions:
  - ```/easybank$ source venv/bin/activate```
  - Then install the requirements with this another command:
  - ```/easybank$ pip install -r requirements.txt```
+ - Finally you should start the project with this last command:
+ - ```/easybank$ python3 manage.py runserver```
 
-
-   
+In the app:
  - Create a User
  - Create a Bank Account (or more if necessary)
  - Go to Transactions and choose the one you prefer
- - Complete the fields and finalize the transaction
+ - Complete the fields and finalize the transactions
